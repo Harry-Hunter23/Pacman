@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  height: 570px;
+  width: 570px;
+  border: solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.grid div {
+  height: 20px;
+  width: 20px;
+  box-sizing: border-box;
+}
+
+.wall {
+  background-color: black;
+}
+
+.coin {
+  background-color: green;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-sizing: border-box;
+}
+
+.power-coin {
+  background-color: green;
+  border-radius: 50%;
+  border: black;
+  box-sizing: border-box;
+}
+
+.pac-man {
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-top: 10px solid yellow;
+  border-left: 10px solid yellow;
+  border-bottom: 10px solid yellow;
+  border-radius: 50%;
+  position: relative;
+  animation: chomp 0.5s infinite;
+}
+
+.right {
+  transform: rotate(0deg);
+}
+
+.down {
+  transform: rotate(90deg);
+}
+
+.left {
+  transform: rotate(180deg);
+}
+
+.up {
+  transform: rotate(-90deg);
+}
+
+@keyframes chomp {
+  0%,
+  100% {
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+  }
+  25% {
+    border-top-width: 0;
+  }
+  50% {
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+  }
+  75% {
+    border-bottom-width: 0;
+  }
+}
+
+.rahul {
+  background-color: pink;
+}
+
+.ramesh {
+  background-color: blueviolet;
+}
+
+.suresh {
+  background-color: brown;
+}
+
+.vicky {
+  background-color: chartreuse;
+}
+
+.ghost {
+  border-radius: 10px;
+}
+
+.scared-ghost {
+  background-color: blue;
+}
