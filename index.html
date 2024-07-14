@@ -3,13 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pacman</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./app.js" defer></script>
+    <title>Pac-Man Game</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="grid"></div>
-    <h3>Score: <span id="score"></span></h3>
-    <h3>Level: <span id="level"></span></h3>
+    <div class="container">
+      <div class="grid"></div>
+      <div class="score-container">
+        <span id="score">Score: 0</span>
+      </div>
+      <div class="controls">
+        <button id="up">Up</button>
+        <div class="left-right-buttons">
+          <button id="left">Left</button>
+          <button id="right">Right</button>
+        </div>
+        <button id="down">Down</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
   </body>
 </html>

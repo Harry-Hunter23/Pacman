@@ -1,109 +1,106 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-.grid {
-  height: 570px;
-  width: 570px;
-  border: solid black;
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(28, 20px);
+  grid-template-rows: repeat(28, 20px);
+  gap: 2px;
 }
 
 .grid div {
-  height: 20px;
   width: 20px;
-  box-sizing: border-box;
-}
-
-.wall {
+  height: 20px;
   background-color: black;
 }
 
+.wall {
+  background-color: blue;
+}
+
 .coin {
-  background-color: green;
+  background-color: yellow;
   border-radius: 50%;
-  border: 5px solid white;
-  box-sizing: border-box;
 }
 
 .power-coin {
-  background-color: green;
+  background-color: orange;
   border-radius: 50%;
-  border: black;
-  box-sizing: border-box;
-}
-
-.pac-man {
-  width: 0;
-  height: 0;
-  border-right: 10px solid transparent;
-  border-top: 10px solid yellow;
-  border-left: 10px solid yellow;
-  border-bottom: 10px solid yellow;
-  border-radius: 50%;
-  position: relative;
-  animation: chomp 0.5s infinite;
-}
-
-.right {
-  transform: rotate(0deg);
-}
-
-.down {
-  transform: rotate(90deg);
-}
-
-.left {
-  transform: rotate(180deg);
-}
-
-.up {
-  transform: rotate(-90deg);
-}
-
-@keyframes chomp {
-  0%,
-  100% {
-    border-top-width: 10px;
-    border-bottom-width: 10px;
-  }
-  25% {
-    border-top-width: 0;
-  }
-  50% {
-    border-top-width: 10px;
-    border-bottom-width: 10px;
-  }
-  75% {
-    border-bottom-width: 0;
-  }
-}
-
-.rahul {
-  background-color: pink;
-}
-
-.ramesh {
-  background-color: blueviolet;
-}
-
-.suresh {
-  background-color: brown;
-}
-
-.vicky {
-  background-color: chartreuse;
 }
 
 .ghost {
-  border-radius: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.pac-man {
+  background-color: yellow;
+  border-radius: 50%;
 }
 
 .scared-ghost {
-  background-color: blue;
+  background-color: lightblue;
+}
+
+.score-container {
+  font-size: 24px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.left-right-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #666;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    gap: 4px;
+  }
+
+  .grid div {
+    width: 30px;
+    height: 30px;
+  }
 }
