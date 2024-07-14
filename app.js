@@ -212,20 +212,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("keyup", movePacman);
 
-  // Add event listeners for buttons
-  document
-    .getElementById("left")
-    .addEventListener("click", () => movePacman({ key: "ArrowLeft" }));
-  document
-    .getElementById("right")
-    .addEventListener("click", () => movePacman({ key: "ArrowRight" }));
-  document
-    .getElementById("up")
-    .addEventListener("click", () => movePacman({ key: "ArrowUp" }));
-  document
-    .getElementById("down")
-    .addEventListener("click", () => movePacman({ key: "ArrowDown" }));
-
   // Pac-Man eating a coin, the coin will be removed
   function coinEaten() {
     if (squares[pacmanCurrentIndex].classList.contains("coin")) {
